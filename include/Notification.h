@@ -6,6 +6,7 @@ using namespace std;
 
 class Notification {
 public:
+    virtual ~Notification() = default;
     virtual void alert() = 0;
 };
 

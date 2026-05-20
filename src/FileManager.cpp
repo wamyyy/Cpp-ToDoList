@@ -1,8 +1,10 @@
 #include "FileManager.h"
 #include <fstream>  
 #include <iostream>
+#include <sys/stat.h>
 
 void FileManager::saveTasks(vector<Task>& tasks) {
+    mkdir("data", 0777); // Ensure data directory exists before saving
     ofstream file("data/tasks.txt");
 
     for (auto &task : tasks) {

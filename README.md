@@ -20,14 +20,17 @@ Le programme permet de :
 - `src/` : contient le code source (.cpp)
 - `data/` : dossier où le fichier de sauvegarde est créé
 
-## Comment compiler le code
+## Comment compiler le code (avec CMake)
 
-Assurez-vous d'avoir un compilateur C++ (comme g++). 
+Assurez-vous d'avoir CMake et un compilateur C++ installés. 
 Ouvrez votre terminal dans le dossier du projet et tapez ces commandes :
 
 ```bash
 mkdir -p data
-g++ -I./include src/*.cpp -o todo_app
+mkdir -p build
+cd build
+cmake ..
+make
 ```
 
 ## Comment l'utiliser
