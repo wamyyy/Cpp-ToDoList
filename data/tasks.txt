@@ -1,0 +1,19 @@
+TodoList/
+│
+├── src/
+│   ├── main.cpp
+│   ├── Task.cpp
+│   ├── TaskManager.cpp
+│   ├── Notification.cpp
+│   └── FileManager.cpp
+│
+├── include/
+│   ├── Task.h
+│   ├── TaskManager.h
+│   ├── Notification.h
+│   └── FileManager.h
+│
+├── data/
+│   └── tasks.txt
+│
+└── README.md
