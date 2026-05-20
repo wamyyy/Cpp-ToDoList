@@ -20,25 +20,26 @@ Le programme permet de :
 - `src/` : contient le code source (.cpp)
 - `data/` : dossier où le fichier de sauvegarde est créé
 
-## Comment compiler le code (avec CMake)
+## Comment compiler et lancer le projet
 
-Assurez-vous d'avoir CMake et un compilateur C++ installés. 
-Ouvrez votre terminal dans le dossier du projet et tapez ces commandes :
+J'ai ajouté un petit script pour vous simplifier la vie. Au lieu de taper plein de commandes, ouvrez votre terminal dans le dossier du projet et tapez juste :
 
 ```bash
-mkdir -p data
-mkdir -p build
-cd build
-cmake ..
-make
+./run.sh
 ```
 
-## Comment l'utiliser
+Ce script va automatiquement créer le dossier `build/`, configurer le projet avec `CMake`, le compiler et le lancer !
 
-Une fois que c'est compilé, vous pouvez lancer l'application avec :
-
+Si vous voulez le faire manuellement, voici les commandes :
 ```bash
+mkdir -p build && cd build
+cmake ..
+make
 ./todo_app
 ```
 
-Un menu va s'afficher. Il suffit de taper le numéro du choix que vous voulez faire et de cliquer sur Entrée. Suivez ensuite les instructions à l'écran. 
+## Ce qui a été corrigé récemment :
+- Ajout de `CMakeLists.txt` et du script `run.sh` pour compiler plus facilement.
+- Le dossier `data/` se crée tout seul maintenant si on lance l'app depuis `build/`, donc plus de soucis de sauvegarde !
+- Correction du bug où le menu tournait en boucle infinie si on tapait une lettre au lieu d'un chiffre.
+- Ajout du fichier `.gitignore` pour garder le projet propre sur GitHub.
