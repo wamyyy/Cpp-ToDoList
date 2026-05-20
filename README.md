@@ -1,62 +1,43 @@
-# 📝 Gestionnaire de Tâches (Todo List) en C++
+# TodoList C++
 
-Un projet de gestionnaire de tâches en ligne de commande (CLI) développé en C++. Cette application permet aux utilisateurs de gérer leurs tâches quotidiennes de manière simple et efficace, avec des fonctionnalités de persistance des données.
+Un petit programme en ligne de commande pour gérer des tâches, écrit en C++. 
+C'est un projet simple pour ajouter, modifier, supprimer et sauvegarder des tâches.
 
-## 🌟 Description
+## Ce que le programme peut faire
 
-Ce gestionnaire de tâches permet d'organiser vos activités avec différentes propriétés telles que la catégorie, la priorité et le statut. 
+Le programme permet de :
+- Ajouter une nouvelle tâche (avec titre, catégorie, priorité, statut)
+- Modifier le titre d'une tâche existante
+- Supprimer une tâche en utilisant son ID
+- Afficher la liste de toutes les tâches
+- Trier les tâches selon leur priorité
+- Sauvegarder dans un fichier texte (`data/tasks.txt`) pour ne rien perdre
+- Charger les tâches depuis ce fichier quand on relance le programme
 
-**Fonctionnalités principales :**
-- **Ajout de tâches :** Créer une nouvelle tâche avec un ID, un titre, une catégorie, une priorité et un statut.
-- **Modification de tâches :** Mettre à jour les informations d'une tâche existante via son ID.
-- **Suppression de tâches :** Retirer une tâche de la liste.
-- **Affichage et Tri :** Visualiser l'ensemble des tâches et les trier par niveau de priorité.
-- **Persistance des données :** Sauvegarde et chargement depuis le fichier de configuration `data/tasks.txt`.
+## Structure du projet
 
----
+- `include/` : contient les fichiers d'en-tête (.h)
+- `src/` : contient le code source (.cpp)
+- `data/` : dossier où le fichier de sauvegarde est créé
 
-## 🛠️ Installation
+## Comment compiler le code
 
-### Prérequis
-- Un compilateur C++ (ex: `g++` ou `clang`)
-- Un terminal (Linux, macOS, ou Windows avec MinGW/WSL)
+Assurez-vous d'avoir un compilateur C++ (comme g++). 
+Ouvrez votre terminal dans le dossier du projet et tapez ces commandes :
 
-### Étapes d'installation
+```bash
+mkdir -p data
+g++ -I./include src/*.cpp -o todo_app
+```
 
-1. **Préparer le répertoire du projet :**
-   Ouvrez un terminal et placez-vous à la racine du projet (`TodoList`).
+## Comment l'utiliser
 
-2. **Créer le dossier de données :**
-   Le programme nécessite un dossier `data` pour stocker les sauvegardes de vos tâches.
-   ```bash
-   mkdir -p data
-   ```
+Une fois que c'est compilé, vous pouvez lancer l'application avec :
 
-3. **Compiler le code source :**
-   Exécutez la commande suivante pour compiler le projet et générer l'exécutable `todo_app` :
-   ```bash
-   g++ -I./include src/*.cpp -o todo_app
-   ```
-
----
-
-## 🚀 Utilisation
-
-Une fois le projet compilé, lancez l'application en exécutant la commande suivante :
 ```bash
 ./todo_app
 ```
 
-### Naviguer dans le Menu Principal
-Le programme fonctionne avec un menu interactif. Tapez le numéro correspondant à l'action souhaitée :
+Un menu va s'afficher. Il suffit de taper le numéro du choix que vous voulez faire et de cliquer sur Entrée. Suivez ensuite les instructions à l'écran. 
 
-- `1` **Ajouter une tache** : Laissez-vous guider pour entrer les détails (ID, Titre, Catégorie, etc.).
-- `2` **Modifier une tache** : Entrez l'ID de la tâche pour mettre à jour son titre.
-- `3` **Supprimer une tache** : Entrez l'ID pour effacer la tâche de votre liste.
-- `4` **Afficher les taches** : Affiche toutes les tâches actuelles.
-- `5` **Trier les taches** : Réorganise la liste.
-- `6` **Sauvegarder** : Enregistre vos tâches dans `data/tasks.txt`.
-- `7` **Charger** : Restaure vos tâches depuis `data/tasks.txt`.
-- `0` **Quitter** : Ferme l'application.
-
-> **💡 Astuce :** N'oubliez pas de **Sauvegarder (Choix 6)** vos modifications avant de quitter le programme pour ne pas perdre vos nouvelles tâches !
+Pensez juste à utiliser l'option de sauvegarde (choix 6) avant de quitter pour ne pas perdre vos tâches.
