@@ -1,12 +1,19 @@
 #include "TaskManager.h"
 #include <iostream>
 #include <algorithm>
+#include <limits>
 void TaskManager::addTask() {
     int id;
     string title, category, priority, status;
 
     cout << "ID: ";
     cin >> id;
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "ID invalide ! Tache non ajoutee." << endl;
+        return;
+    }
     cin.ignore();
 
     cout << "Titre: ";
@@ -30,6 +37,12 @@ void TaskManager::modifyTask() {
     int id;
     cout << "Entrer ID de la tache: ";
     cin >> id;
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "ID invalide !" << endl;
+        return;
+    }
     cin.ignore();
 
     for (auto &task : tasks) {
@@ -51,6 +64,12 @@ void TaskManager::deleteTask() {
     int id;
     cout << "Entrer ID: ";
     cin >> id;
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "ID invalide !" << endl;
+        return;
+    }
     cin.ignore();
 
     for (auto it = tasks.begin(); it != tasks.end(); ++it) {

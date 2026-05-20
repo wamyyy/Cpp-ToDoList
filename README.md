@@ -39,5 +39,3 @@ Une fois que c'est compilé, vous pouvez lancer l'application avec :
 ```
 
 Un menu va s'afficher. Il suffit de taper le numéro du choix que vous voulez faire et de cliquer sur Entrée. Suivez ensuite les instructions à l'écran. 
-
-Pensez juste à utiliser l'option de sauvegarde (choix 6) avant de quitter pour ne pas perdre vos tâches.
