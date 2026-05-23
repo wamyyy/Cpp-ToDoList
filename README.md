@@ -1,89 +1,139 @@
-# Gestionnaire de Tâches — C++
+# <b>Task Manager — C++</b>
 
-Application de gestion de tâches en ligne de commande développée en **C++17** en utilisant une architecture basée sur la **Programmation Orientée Objet (POO)**.
+<br>
 
-Compatible avec **Windows (CMD), Linux et macOS**.
+> Command-line task manager written in C++ using an Object-Oriented Programming architecture.  
+> Compatible with Windows (CMD), Linux, and macOS.
 
+<br>
+## <b>By : </b>
+Ayoub EL WAMY   /  </b>
+Achraf KADDOURI   /  </b>
+Abdellah OMALEK   /  </b>
+Taha BENZAKI   .  </b>
 
-##  Réalisé par
+## <b>Overview</b>
 
-- Ayoub EL WAMY  
-- Achraf KADDOURI  
-- Abdellah OMALEK  
-- Taha BENZAKI  
+This project is a terminal-based task manager that allows users to create, organize, update, and persist tasks directly from the command line.
+Each task contains:
+- A unique ID
+- A title
+- A category
+- A priority level
+- A status
 
----
+All data is automatically saved into a text file and reloaded when the application starts again.
 
-##  Présentation
+<br>
 
-Ce projet est un gestionnaire de tâches fonctionnant dans le terminal.  
-Il permet aux utilisateurs de **créer, organiser, modifier, supprimer et sauvegarder des tâches** directement depuis la ligne de commande.
+## <b>Features</b>
 
-Chaque tâche contient :
+| Feature | Description |
+|---|---|
+| Add Task | Create a task with title, category, priority, and status |
+| Edit Task | Update any task field using its ID |
+| Delete Task | Remove a task by ID |
+| Display Tasks | Show all tasks in a clean aligned table |
+| Sort Tasks | Sort tasks by priority (Urgent first) |
+| Save Tasks | Store tasks inside `data/tasks.txt` |
+| Load Tasks | Reload saved tasks automatically |
 
-- Un identifiant unique (ID)
-- Un titre
-- Une catégorie
-- Un niveau de priorité
-- Un statut
+<br>
 
-Toutes les données sont automatiquement sauvegardées dans un fichier texte puis rechargées au lancement de l’application.
+## <b>Accepted Values</b>
 
----
+### <b>Priority Levels</b>
 
-##  Fonctionnalités
-
-| Fonctionnalité | Description |
-|----------------|-------------|
-|  Ajouter une tâche | Créer une tâche avec un titre, une catégorie, une priorité et un statut |
-|  Modifier une tâche | Modifier les informations d’une tâche via son ID |
-|  Supprimer une tâche | Supprimer une tâche grâce à son ID |
-|  Afficher les tâches | Afficher toutes les tâches dans un tableau formaté |
-|  Trier les tâches | Trier les tâches par priorité (Urgent en premier) |
-|  Sauvegarder les tâches | Enregistrer les tâches dans `data/tasks.txt` |
-|  Charger les tâches | Recharger automatiquement les tâches sauvegardées |
-
----
-
-##  Valeurs Acceptées
-
-### Niveaux de Priorité
-
-| Choix | Valeur |
-|-------|---------|
+| Choice | Value |
+|---|---|
 | 1 | Urgent |
-| 2 | Haute |
-| 3 | Normale |
-| 4 | Faible |
+| 2 | High |
+| 3 | Normal |
+| 4 | Low |
 
-### Statut des Tâches
+<br>
 
-| Choix | Valeur |
-|-------|---------|
-| 1 | À faire |
-| 2 | En cours |
-| 3 | En attente |
-| 4 | Terminée |
-| 5 | Annulée |
+### <b>Task Status</b>
 
-> Les niveaux de priorité et les statuts sont sélectionnés via des menus numériques afin d’éviter les erreurs de saisie.
+| Choice | Value |
+|---|---|
+| 1 | To Do |
+| 2 | In Progress |
+| 3 | Pending |
+| 4 | Completed |
+| 5 | Cancelled |
 
----
+<br>
 
-## ⚙️ Compilation & Exécution
+> Priority and status are selected using numbered menus — free text input is not allowed.
 
-### Prérequis
+<br>
+
+## <b>Compilation & Execution</b>
+
+### <b>Requirements</b>
 
 - CMake 3.14+
-- Compilateur compatible C++17 :
+- C++17 compatible compiler:
   - GCC
   - Clang
   - MSVC
 
----
+<br>
 
-##  Compilation du Projet
+### <b>Build Project</b>
 
 ```bash
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
+```
+
+<br>
+
+## <b>Run the Application</b>
+
+### <b>Linux / macOS</b>
+
+```bash
+./build/bin/todo_app
+```
+
+<br>
+
+### <b>Windows CMD</b>
+
+```bash
+build\bin\todo_app.exe
+```
+
+<br>
+
+> The `data/` directory is automatically created during the first save.
+
+<br>
+
+## <b>Project Structure</b>
+```text
+TodoList/
+├── CMakeLists.txt
+├── README.md
+├── include/
+│   ├── Task.h
+│   ├── TaskManager.h
+│   ├── FileManager.h
+│   └── Notification.h
+└── src/
+    ├── main.cpp
+    ├── Task.cpp
+    ├── TaskManager.cpp
+    └── FileManager.cpp
+```
+<br>
+## <b>Technologies Used</b>
+- C++17
+- Object-Oriented Programming (OOP)
+- CMake
+- File Handling
+- STL (Standard Template Library)
+<br>
+
