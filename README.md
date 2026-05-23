@@ -6,12 +6,13 @@
 > Compatible with Windows (CMD), Linux, and macOS.
 
 <br>
+<br>
 ## <b>Authors</b>
 - **Ayoub EL WAMY**
 - **ACHRAF KADDOURI**
 - **Abdellah OMALEK**
 - **Taha BENZAKI**
-
+<br>
 ## <b>Overview</b>
 
 This project is a terminal-based task manager that allows users to create, organize, update, and persist tasks directly from the command line.
@@ -137,12 +138,5 @@ Cpp-ToDoList/
     ├── TaskManager.cpp
     └── FileManager.cpp
 ```
-<br>
-## <b>Technologies Used</b>
-- C++17
-- Object-Oriented Programming (OOP)
-- CMake
-- File Handling
-- STL (Standard Template Library)
-<br>
+
 
