@@ -13,14 +13,14 @@ public:
 class UrgentTask : public Notification {
 public:
     void alert() override {
-        cout << "[URGENT] Attention immediate !" << endl;
+        cout << "  [!] URGENT  - Attention immediate !" << endl;
     }
 };
 
 class NormalTask : public Notification {
 public:
     void alert() override {
-        cout << "[NORMAL] Tache classique." << endl;
+        cout << "  [~] NORMAL  - Tache classique." << endl;
     }
 };
 

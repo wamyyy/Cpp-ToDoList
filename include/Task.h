@@ -1,6 +1,6 @@
 #ifndef TASK_H
 #define TASK_H
-#include<string>
+#include <string>
 using namespace std;
 
 class Task {
@@ -13,7 +13,7 @@ private:
 
 public:
     Task();
-    Task(int id, string title, string category,string priority, string status);
+    Task(int id, string title, string category, string priority, string status);
 
     void display() const;
 
