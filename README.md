@@ -4,16 +4,6 @@ Application de gestion de tâches en ligne de commande développée en **C++17**
 
 Compatible avec **Windows (CMD), Linux et macOS**.
 
-<<<<<<< HEAD
----
-=======
-<br>
-## <b>By : </b>
-Ayoub EL WAMY   /  </b>
-ACHRAF KADDOURI   /  </b>
-Abdellah OMALEK   /  </b>
-Taha BENZAKI   .  </b>
->>>>>>> cdd5045 (Corrige le design V2 avec quelques améliorations)
 
 ##  Réalisé par
 
