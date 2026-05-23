@@ -125,9 +125,11 @@ cmake --build build
 ## <b>Project Structure</b>
 ```text
 Cpp-ToDoList/
+├──  Projet/
+    └──Rapport de Projet.pdf
 ├── CMakeLists.txt
 ├── .gitignore
-├── README.md
+├── README.md 
 ├── run.sh
 ├── include/
 │   ├── Task.h
