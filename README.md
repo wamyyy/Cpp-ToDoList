@@ -1,45 +1,45 @@
-# TodoList C++
+Task Manager — C++
 
-Un petit programme en ligne de commande pour gérer des tâches, écrit en C++. 
-C'est un projet simple pour ajouter, modifier, supprimer et sauvegarder des tâches.
+Gestionnaire de taches en ligne de commande, ecrit en C++ avec une architecture orientee objet.
+Compatible Windows (CMD) et Linux / macOS.
 
-## Ce que le programme peut faire
 
-Le programme permet de :
-- Ajouter une nouvelle tâche (avec titre, catégorie, priorité, statut)
-- Modifier le titre d'une tâche existante
-- Supprimer une tâche en utilisant son ID
-- Afficher la liste de toutes les tâches
-- Trier les tâches selon leur priorité
-- Sauvegarder dans un fichier texte (`data/tasks.txt`) pour ne rien perdre
-- Charger les tâches depuis ce fichier quand on relance le programme
+Apercu
+Ce programme permet de creer, organiser et persister des taches directement dans le terminal.
+Chaque tache possede un identifiant unique, un titre, une categorie, une priorite et un statut.
+Les donnees sont sauvegardees dans un fichier texte et rechargees automatiquement a la prochaine execution.
 
-## Structure du projet
+Fonctionnalites
+ActionDescriptionAjouterCreer une tache avec titre, categorie, priorite, statutModifierMettre a jour n'importe quel champ via l'IDSupprimerRetirer une tache par son IDAfficherVoir toutes les taches dans un tableau aligneTrierClasser par priorite (Urgent en premier)SauvegarderEcrire les taches dans data/tasks.txtChargerRestaurer les taches depuis le fichier
 
-- `include/` : contient les fichiers d'en-tête (.h)
-- `src/` : contient le code source (.cpp)
-- `data/` : dossier où le fichier de sauvegarde est créé
+Valeurs acceptees
+Priorite
+ChoixValeur1Urgent2Haute3Normale4Basse
+Statut
+ChoixValeur1A faire2En cours3En attente4Termine5Annule
+La priorite et le statut se choisissent via un menu numerote — aucune saisie libre possible.
 
-## Comment compiler et lancer le projet
+Compilation et execution
+Prerequis : CMake 3.14 ou superieur, compilateur C++17 (GCC, Clang ou MSVC)
+bashcmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+Linux / macOS
+bash./build/bin/todo_app
+Windows CMD
+build\bin\todo_app.exe
+Le dossier data/ est cree automatiquement lors de la premiere sauvegarde.
 
-J'ai ajouté un petit script pour vous simplifier la vie. Au lieu de taper plein de commandes, ouvrez votre terminal dans le dossier du projet et tapez juste :
-
-```bash
-./run.sh
-```
-
-Ce script va automatiquement créer le dossier `build/`, configurer le projet avec `CMake`, le compiler et le lancer !
-
-Si vous voulez le faire manuellement, voici les commandes :
-```bash
-mkdir -p build && cd build
-cmake ..
-make
-./todo_app
-```
-
-## Ce qui a été corrigé récemment :
-- Ajout de `CMakeLists.txt` et du script `run.sh` pour compiler plus facilement.
-- Le dossier `data/` se crée tout seul maintenant si on lance l'app depuis `build/`, donc plus de soucis de sauvegarde !
-- Correction du bug où le menu tournait en boucle infinie si on tapait une lettre au lieu d'un chiffre.
-- Ajout du fichier `.gitignore` pour garder le projet propre sur GitHub.
+Structure du projet
+TodoList/
+├── CMakeLists.txt
+├── README.md
+├── include/
+│   ├── Task.h
+│   ├── TaskManager.h
+│   ├── FileManager.h
+│   └── Notification.h
+└── src/
+    ├── main.cpp
+    ├── Task.cpp
+    ├── TaskManager.cpp
+    └── FileManager.cpp
