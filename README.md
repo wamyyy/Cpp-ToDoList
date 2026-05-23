@@ -1,35 +1,114 @@
-Task Manager — C++
+# <b>Task Manager — C++</b>
 
-Gestionnaire de taches en ligne de commande, ecrit en C++ avec une architecture orientee objet.
-Compatible Windows (CMD) et Linux / macOS.
+<br>
 
+> Command-line task manager written in C++ using an Object-Oriented Programming architecture.  
+> Compatible with Windows (CMD), Linux, and macOS.
 
-Apercu
-Ce programme permet de creer, organiser et persister des taches directement dans le terminal.
-Chaque tache possede un identifiant unique, un titre, une categorie, une priorite et un statut.
-Les donnees sont sauvegardees dans un fichier texte et rechargees automatiquement a la prochaine execution.
+<br>
 
-Fonctionnalites
-ActionDescriptionAjouterCreer une tache avec titre, categorie, priorite, statutModifierMettre a jour n'importe quel champ via l'IDSupprimerRetirer une tache par son IDAfficherVoir toutes les taches dans un tableau aligneTrierClasser par priorite (Urgent en premier)SauvegarderEcrire les taches dans data/tasks.txtChargerRestaurer les taches depuis le fichier
+## <b>Overview</b>
 
-Valeurs acceptees
-Priorite
-ChoixValeur1Urgent2Haute3Normale4Basse
-Statut
-ChoixValeur1A faire2En cours3En attente4Termine5Annule
-La priorite et le statut se choisissent via un menu numerote — aucune saisie libre possible.
+This project is a terminal-based task manager that allows users to create, organize, update, and persist tasks directly from the command line.
+Each task contains:
+- A unique ID
+- A title
+- A category
+- A priority level
+- A status
 
-Compilation et execution
-Prerequis : CMake 3.14 ou superieur, compilateur C++17 (GCC, Clang ou MSVC)
-bashcmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+All data is automatically saved into a text file and reloaded when the application starts again.
+
+<br>
+
+## <b>Features</b>
+
+| Feature | Description |
+|---|---|
+| Add Task | Create a task with title, category, priority, and status |
+| Edit Task | Update any task field using its ID |
+| Delete Task | Remove a task by ID |
+| Display Tasks | Show all tasks in a clean aligned table |
+| Sort Tasks | Sort tasks by priority (Urgent first) |
+| Save Tasks | Store tasks inside `data/tasks.txt` |
+| Load Tasks | Reload saved tasks automatically |
+
+<br>
+
+## <b>Accepted Values</b>
+
+### <b>Priority Levels</b>
+
+| Choice | Value |
+|---|---|
+| 1 | Urgent |
+| 2 | High |
+| 3 | Normal |
+| 4 | Low |
+
+<br>
+
+### <b>Task Status</b>
+
+| Choice | Value |
+|---|---|
+| 1 | To Do |
+| 2 | In Progress |
+| 3 | Pending |
+| 4 | Completed |
+| 5 | Cancelled |
+
+<br>
+
+> Priority and status are selected using numbered menus — free text input is not allowed.
+
+<br>
+
+## <b>Compilation & Execution</b>
+
+### <b>Requirements</b>
+
+- CMake 3.14+
+- C++17 compatible compiler:
+  - GCC
+  - Clang
+  - MSVC
+
+<br>
+
+### <b>Build Project</b>
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
-Linux / macOS
-bash./build/bin/todo_app
-Windows CMD
-build\bin\todo_app.exe
-Le dossier data/ est cree automatiquement lors de la premiere sauvegarde.
+```
 
-Structure du projet
+<br>
+
+## <b>Run the Application</b>
+
+### <b>Linux / macOS</b>
+
+```bash
+./build/bin/todo_app
+```
+
+<br>
+
+### <b>Windows CMD</b>
+
+```bash
+build\bin\todo_app.exe
+```
+
+<br>
+
+> The `data/` directory is automatically created during the first save.
+
+<br>
+
+## <b>Project Structure</b>
+```text
 TodoList/
 ├── CMakeLists.txt
 ├── README.md
@@ -43,3 +122,13 @@ TodoList/
     ├── Task.cpp
     ├── TaskManager.cpp
     └── FileManager.cpp
+```
+<br>
+## <b>Technologies Used</b>
+- C++17
+- Object-Oriented Programming (OOP)
+- CMake
+- File Handling
+- STL (Standard Template Library)
+<br>
+
