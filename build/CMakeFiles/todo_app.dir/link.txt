@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/todo_app.dir/src/main.cpp.o CMakeFiles/todo_app.dir/src/Task.cpp.o CMakeFiles/todo_app.dir/src/TaskManager.cpp.o CMakeFiles/todo_app.dir/src/FileManager.cpp.o -o bin/todo_app 

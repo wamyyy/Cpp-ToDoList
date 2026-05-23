@@ -5,28 +5,34 @@
 #include <limits>
 using namespace std;
 
+static void printHeader() {
+    cout << "\n  +----------------------------------+" << endl;
+    cout << "  |          TASK MANAGER            |" << endl;
+    cout << "  +----------------------------------+" << endl;
+    cout << "  |  1. Ajouter une tache            |" << endl;
+    cout << "  |  2. Modifier une tache           |" << endl;
+    cout << "  |  3. Supprimer une tache          |" << endl;
+    cout << "  |  4. Afficher les taches          |" << endl;
+    cout << "  |  5. Trier les taches             |" << endl;
+    cout << "  |  6. Sauvegarder                  |" << endl;
+    cout << "  |  7. Charger                      |" << endl;
+    cout << "  |  0. Quitter                      |" << endl;
+    cout << "  +----------------------------------+" << endl;
+    cout << "  Choix : ";
+}
+
 int main() {
     TaskManager manager;
-
     int choice;
 
     do {
-        cout << "\n1. Ajouter une tache" << endl;
-        cout << "2. Modifier une tache" << endl;
-        cout << "3. Supprimer une tache" << endl;
-        cout << "4. Afficher les taches" << endl;
-        cout << "5. Trier les taches" << endl;
-        cout << "6. Sauvegarder" << endl;
-        cout << "7. Charger" << endl;
-        cout << "0. Quitter" << endl;
-
-        cout << "Choix: ";
+        printHeader();
         cin >> choice;
 
         if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            choice = -1; // Force default case
+            choice = -1;
         }
 
         switch (choice) {
@@ -59,11 +65,11 @@ int main() {
             break;
 
         case 0:
-            cout << "Au revoir !" << endl;
+            cout << "\n  Au revoir !\n" << endl;
             break;
 
         default:
-            cout << "Choix invalide !" << endl;
+            cout << "  [!] Choix invalide. Entrez un nombre entre 0 et 7." << endl;
         }
 
     } while (choice != 0);

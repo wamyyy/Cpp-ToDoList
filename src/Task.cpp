@@ -1,13 +1,12 @@
 #include "Task.h"
 #include <iostream>
-
+#include <iomanip>
 
 Task::Task() {
     id = 0;
 }
 
-Task::Task(int id, string title, string category,string priority, string status)
-{
+Task::Task(int id, string title, string category, string priority, string status) {
     this->id = id;
     this->title = title;
     this->category = category;
@@ -16,7 +15,13 @@ Task::Task(int id, string title, string category,string priority, string status)
 }
 
 void Task::display() const {
-  cout << "ID: " << id << " | Titre: " << title<< " | Catégorie: " << category<< " | Priorité: " << priority<< " | Statut: " << status << endl;
+    cout << "  | "
+         << setw(4)  << left << id       << " | "
+         << setw(20) << left << title    << " | "
+         << setw(12) << left << category << " | "
+         << setw(10) << left << priority << " | "
+         << setw(12) << left << status
+         << " |" << endl;
 }
 
 int Task::getId() const {
