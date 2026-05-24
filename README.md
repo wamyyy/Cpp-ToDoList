@@ -93,8 +93,7 @@ Vous pouvez configurer, compiler et exécuter le projet automatiquement en une s
 ```bash
 chmod +x run.sh
 ./run.sh
-
-<b>Option 2 : Compilation & Exécution Manuelles</b>
+```
 
 Si vous préférez compiler et exécuter le projet manuellement :
 
