@@ -1,129 +1,121 @@
-# <b>Task Manager — C++</b>
+# <b>Gestionnaire de Tâches — C++</b>
 
 <br>
 
-> Command-line task manager written in C++ using an Object-Oriented Programming architecture.  
-> Compatible with Windows (CMD), Linux, and macOS.
+> Gestionnaire de tâches en ligne de commande écrit en C++ avec une architecture orientée objet.  
+> Compatible avec Windows (CMD), Linux et macOS.
 
 <br>
 <br>
-## <b>Authors  : </b>
+
+## <b>Auteurs : </b>
+
 Ayoub EL WAMY   / 
 ACHRAF KADDOURI    / 
 Abdellah OMALEK    / 
 Taha BENZAKI    .
-<br>
-
-
-## <b>Overview</b>
-
-This project is a terminal-based task manager that allows users to create, organize, update, and persist tasks directly from the command line.
-Each task contains:
-- A unique ID
-- A title
-- A category
-- A priority level
-- A status
-
-All data is automatically saved into a text file and reloaded when the application starts again.
 
 <br>
 
-## <b>Features</b>
+## <b>Aperçu</b>
 
-| Feature | Description |
+Ce projet est un gestionnaire de tâches basé sur le terminal qui permet aux utilisateurs de créer, organiser, modifier et sauvegarder des tâches directement depuis la ligne de commande.  
+Chaque tâche contient :
+- Un identifiant unique
+- Un titre
+- Une catégorie
+- Un niveau de priorité
+- Un statut
+
+Toutes les données sont automatiquement enregistrées dans un fichier texte et rechargées lors du prochain démarrage de l’application.
+
+<br>
+
+## <b>Fonctionnalités</b>
+
+| Fonctionnalité | Description |
 |---|---|
-| Add Task | Create a task with title, category, priority, and status |
-| Edit Task | Update any task field using its ID |
-| Delete Task | Remove a task by ID |
-| Display Tasks | Show all tasks in a clean aligned table |
-| Sort Tasks | Sort tasks by priority (Urgent first) |
-| Save Tasks | Store tasks inside `data/tasks.txt` |
-| Load Tasks | Reload saved tasks automatically |
+| Ajouter une tâche | Créer une tâche avec un titre, une catégorie, une priorité et un statut |
+| Modifier une tâche | Mettre à jour n’importe quel champ d’une tâche via son ID |
+| Supprimer une tâche | Supprimer une tâche à l’aide de son ID |
+| Afficher les tâches | Afficher toutes les tâches dans un tableau propre et aligné |
+| Trier les tâches | Trier les tâches par priorité (Urgent en premier) |
+| Sauvegarder les tâches | Enregistrer les tâches dans `data/tasks.txt` |
+| Charger les tâches | Recharger automatiquement les tâches sauvegardées |
 
 <br>
 
-## <b>Accepted Values</b>
+## <b>Valeurs Acceptées</b>
 
-### <b>Priority Levels</b>
+### <b>Niveaux de Priorité</b>
 
-| Choice | Value |
+| Choix | Valeur |
 |---|---|
 | 1 | Urgent |
-| 2 | High |
-| 3 | Normal |
-| 4 | Low |
+| 2 | Élevée |
+| 3 | Normale |
+| 4 | Faible |
 
 <br>
 
-### <b>Task Status</b>
+### <b>Statut des Tâches</b>
 
-| Choice | Value |
+| Choix | Valeur |
 |---|---|
-| 1 | To Do |
-| 2 | In Progress |
-| 3 | Pending |
-| 4 | Completed |
-| 5 | Cancelled |
+| 1 | À faire |
+| 2 | En cours |
+| 3 | En attente |
+| 4 | Terminée |
+| 5 | Annulée |
 
 <br>
 
-> Priority and status are selected using numbered menus — free text input is not allowed.
+> La priorité et le statut sont sélectionnés à l’aide de menus numérotés — la saisie libre n’est pas autorisée.
 
 <br>
 
-## <b>Compilation & Execution</b>
+## <b>Compilation & Exécution</b>
 
-### <b>Requirements</b>
+### <b>Prérequis</b>
 
 - CMake 3.14+
-- C++17 compatible compiler:
+- Compilateur compatible C++17 :
   - GCC
   - Clang
   - MSVC
 
 <br>
 
-### <b>Option 1: Quick Run (Linux / macOS)</b>
+### <b>Option 1 : Exécution Rapide (Linux / macOS)</b>
 
-You can configure, compile, and run the project automatically in one single step:
+Vous pouvez configurer, compiler et exécuter le projet automatiquement en une seule étape :
 
 ```bash
 chmod +x run.sh
 ./run.sh
-```
 
-<br>
+<b>Option 2 : Compilation & Exécution Manuelles</b>
 
-### <b>Option 2: Manual Build & Run</b>
+Si vous préférez compiler et exécuter le projet manuellement :
 
-If you prefer to build and run the project manually:
-
-#### <b>1. Build the project:</b>
-```bash
+<b>1. Compiler le projet :</b>
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
-```
+<b>2. Exécuter l’application :</b>
 
-#### <b>2. Run the application:</b>
+Linux / macOS :
 
-* **Linux / macOS:**
-  ```bash
-  ./build/bin/todo_app
-  ```
-* **Windows CMD:**
-  ```cmd
-  build\bin\todo_app.exe
-  ```
+./build/bin/todo_app
 
+Windows CMD :
+
+build\bin\todo_app.exe
 <br>
 
-> The `data/` directory is automatically created during the first save.
+Le dossier data/ est automatiquement créé lors de la première sauvegarde.
 
 <br>
-
-## <b>Project Structure</b>
-```text
+<b>Structure du Projet</b>
 Cpp-ToDoList/
 ├──  Projet/
     └──Rapport de Projet.pdf
@@ -141,6 +133,5 @@ Cpp-ToDoList/
     ├── Task.cpp
     ├── TaskManager.cpp
     └── FileManager.cpp
-```
 
 
