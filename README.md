@@ -114,12 +114,19 @@ build\bin\todo_app.exe
 Le dossier data/ est automatiquement créé lors de la première sauvegarde.
 
 <br>
+
+
+
+
+## <b>Structure du Projet</b>
+
+```text
 Cpp-ToDoList/
-├──  Projet/
-    └──Rapport de Projet.pdf
+├── Projet/
+│   └── Rapport de Projet.pdf
 ├── CMakeLists.txt
 ├── .gitignore
-├── README.md 
+├── README.md
 ├── run.sh
 ├── include/
 │   ├── Task.h
@@ -131,4 +138,3 @@ Cpp-ToDoList/
     ├── Task.cpp
     ├── TaskManager.cpp
     └── FileManager.cpp
-
